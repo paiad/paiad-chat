@@ -165,4 +165,4 @@ Please ensure that you adapt this summary to fit the specific context and nuance
 
 ---
 
-## [Go Back to ReadMe](../README.md)
+## [Go Back to ReadMe](../README-LibreChat)
