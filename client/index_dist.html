@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="theme-color" content="#171717" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="LibreChat - An open source chat application with support for multiple AI models" />
+    <title>𝑷𝒂𝒊𝒂𝒅 𝑪𝒉𝒂𝒕</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon-180x180.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+    <script>
+      const theme = localStorage.getItem('color-theme');
+      const loadingContainerStyle = document.createElement('style');
+      let backgroundColor;
+
+      if (theme === 'dark') {
+        backgroundColor = '#0d0d0d';
+      } else if (theme === 'light') {
+        backgroundColor = '#ffffff';
+      } else if (theme === 'system') {
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        backgroundColor = prefersDarkScheme ? '#0d0d0d' : '#ffffff';
+      } else {
+        backgroundColor = '#ffffff';
+      }
+
+      loadingContainerStyle.innerHTML = `
+        #loading-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          background-color: ${backgroundColor};
+        }
+      `;
+      document.head.appendChild(loadingContainerStyle);
+    </script>
+    <script type="module" crossorigin src="./assets/react-interactions.BiO1nID1.js"></script>
+    <script type="module" crossorigin src="./assets/markdown_highlight.YFvJ8PVJ.js"></script>
+    <script type="module" crossorigin src="./assets/validation.CeCA-dRw.js"></script>
+    <script type="module" crossorigin src="./assets/math-katex.steiuUVT.js"></script>
+    <script type="module" crossorigin src="./assets/vendor.Cqzv7Y2e.js"></script>
+    <script type="module" crossorigin src="./assets/i18n.DMSRYMuy.js"></script>
+    <script type="module" crossorigin src="./assets/locales.CYSnU3K-.js"></script>
+    <script type="module" crossorigin src="./assets/routing.DINL4Gax.js"></script>
+    <script type="module" crossorigin src="./assets/radix-ui.BJcN8DO5.js"></script>
+    <script type="module" crossorigin src="./assets/tanstack-vendor.B_PTOi1V.js"></script>
+    <script type="module" crossorigin src="./assets/avatars.h8saQOOS.js"></script>
+    <script type="module" crossorigin src="./assets/advanced-inputs.Cy5dtKGC.js"></script>
+    <script type="module" crossorigin src="./assets/animations.DoCLRNBg.js"></script>
+    <script type="module" crossorigin src="./assets/virtualization.uzjuHVPe.js"></script>
+    <script type="module" crossorigin src="./assets/headlessui.IsuTRzxN.js"></script>
+    <script type="module" crossorigin src="./assets/framer-motion.CoSbn_z6.js"></script>
+    <script type="module" crossorigin src="./assets/http-client.DABZ03PL.js"></script>
+    <script type="module" crossorigin src="./assets/utilities.Be-Is_-r.js"></script>
+    <script type="module" crossorigin src="./assets/date-utils.j-oxXFG2.js"></script>
+    <script type="module" crossorigin src="./assets/forms.WVfMSmLf.js"></script>
+    <script type="module" crossorigin src="./assets/security-ui.BiG1lPPp.js"></script>
+    <script type="module" crossorigin src="./assets/heic-converter.Cz_Prg7D.js"></script>
+    <script type="module" crossorigin src="./assets/markdown-processing.MlvRvaVW.js"></script>
+    <script type="module" crossorigin src="./assets/codemirror-state.Pf71Wo5N.js"></script>
+    <script type="module" crossorigin src="./assets/codemirror-view.lFdxsulL.js"></script>
+    <script type="module" crossorigin src="./assets/codemirror-language.CSMPAXPP.js"></script>
+    <script type="module" crossorigin src="./assets/codemirror-core.CxU5-1DU.js"></script>
+    <script type="module" crossorigin src="./assets/sandpack.CdwMuX9e.js"></script>
+    <script type="module" crossorigin src="./assets/index.P7JGhGXI.js"></script>
+    <script>
+      // 强制覆盖标题，并防止被再次修改
+      const FORCE_TITLE = "𝑷𝒂𝒊𝒂𝒅 𝑪𝒉𝒂𝒕";
+
+      function applyTitle() {
+        if (document.title !== FORCE_TITLE) {
+          document.title = FORCE_TITLE;
+        }
+      }
+
+      // 第一次加载时设置
+      document.addEventListener("DOMContentLoaded", applyTitle);
+
+      // 监听标题变化，如果被改回去再抢回来
+      const observer = new MutationObserver(applyTitle);
+      observer.observe(document.querySelector("title"), { childList: true, subtree: true });
+    </script>
+
+    <link rel="stylesheet" crossorigin href="./assets/math-katex.sdXCKFqw.css">
+    <link rel="stylesheet" crossorigin href="./assets/index.C5j2yQes.css">
+  <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <body>
+    <div id="root">
+      <div id="loading-container"></div>
+    </div>
+  </body>
+</html>
